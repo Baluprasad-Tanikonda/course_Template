@@ -1,0 +1,141 @@
+/** @format */
+.aside {
+  font-size: 1.2rem;
+  color: black;
+  background-color: rgba(255, 0, 0, 0.85);
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  z-index: 1000;
+}
+
+.MasterClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../Assets/masterclass/pattern-colour.png");
+  height: 400px;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+.Text1,
+.Text3 {
+  font-size: 20px;
+  color: white;
+}
+.Text2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+}
+
+.headings {
+  margin-top: 30px;
+}
+
+.classVideo {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -240px;
+}
+.ClassImage {
+  width: 65%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.nextLive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -200px;
+}
+.nextLive h2{
+    padding-top: 25px;
+}
+
+.timerBoxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.timerBox {
+    background-color: #e49fff3e;
+    border: 3px solid blueviolet;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 25px;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 4px 4px 0 2px rgba(151, 82, 255, 0.416);
+}
+
+.timeCount{
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #000958;
+}
+
+/* media queries */
+@media (max-width: 376px) {
+  .aside {
+    font-size: 1rem;
+    padding: 8px 10px;
+    right: 10px;
+    display: none;
+  }
+
+  .MasterClass {
+    height: 300px;
+  }
+
+  .Text1,
+  .Text3 {
+    font-size: 18px;
+  }
+
+  .Text2 {
+    font-size: 40px;
+  }
+
+  .headings {
+    margin-top: 20px;
+  }
+
+  .classVideo {
+    top: -200px;
+  }
+
+  .ClassImage {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .nextLive {
+    top: -150px;
+  }
+
+  .nextLive h2 {
+    padding-top: 15px;
+  }
+
+  .timerBox {
+    width: 70px;
+    padding:18px 2px;
+    margin: 0 8px;
+    font-size: 16px;
+  }
+
+  .timeCount {
+    font-size: 30px;
+  }
+}
+
