@@ -39,8 +39,8 @@ const Testmonials = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const imageToDisplay = screenWidth < 900 ? TYmobileView : YTW;
-    const imageForStatistics = screenWidth < 900 ? YTWmogileView : YTB;
+    const imageToDisplay = screenWidth < 800 ? TYmobileView : YTW;
+    const imageForStatistics = screenWidth < 800 ? YTWmogileView : YTB;
 
     // Use IntersectionObserver to trigger the animation when in view
     useEffect(() => {
@@ -106,7 +106,7 @@ const Testmonials = () => {
                         <span className={styles.statValue}>{averageRating}/5</span>
                         <p className={styles.statLabel}>Average Rating</p>
                     </div>
-                    {screenWidth > 800 && (
+                    {screenWidth > 790 && (
                         <div className={styles.stat}>
                             <span className={styles.statValue}>{completionRating}%</span>
                             <p className={styles.statLabel}>Completion Rating</p>

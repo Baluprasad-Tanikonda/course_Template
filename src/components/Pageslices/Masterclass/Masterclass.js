@@ -43,7 +43,7 @@ const Masterclass = () => {
     return (
         <div>
             <div className={styles.MasterClass}>
-                <span className={styles.aside}>press B anytime to Enroll</span>
+                {/* <span className={styles.aside}>press B anytime to Enroll</span> */}
                 <div className={styles.headings}>
                     <p className={styles.Text1}>That's why we created </p>
                     <p className={styles.Text2}>a masterclass</p>

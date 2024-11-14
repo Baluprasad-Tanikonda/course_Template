@@ -353,7 +353,8 @@
   .headerText {
     font-size: 28px;
     margin-bottom: 10px;
-    max-width: 100%;
+    max-width: 90%;
+    text-align: center;
   }
 
   .professorTitle h3 {
@@ -423,6 +424,715 @@
   .questionItem p {
     font-size: 16px;
     max-width: 80%;
+    text-align: center;
+  }
+}
+@media (min-width: 377px) and (max-width: 440px) {
+  .headerContainer {
+    width: 100%;
+  }
+
+  .contentContainer {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+    flex-direction: column;
+    box-shadow: none;
+    border: 1px solid rgba(97, 97, 255, 0.2);
+    height: auto;
+  }
+
+  .FollowerImage {
+    width: 150px;
+  }
+
+  .symbolsContainer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .symbolItemContent {
+    position: relative;
+    top: 750px;
+    left: 10px;
+  }
+
+  .symbolItem {
+    gap: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .symbolText {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .EnrollButtonContent {
+    position: relative;
+    top: 550px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .EnrollButton {
+    visibility: visible;
+    display: block;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .FollowerStars {
+    gap: 5px;
+  }
+
+  .star {
+    width: 20px;
+  }
+
+  .FollowerCount {
+    font-size: 0.9rem;
+  }
+
+  .HeaderPicture {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top: -180px;
+    gap: 25px;
+  }
+
+  .headerText {
+    font-size: 48px;
+    margin-bottom: 15px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .professorTitle h3 {
+    font-size: 1.2rem;
+  }
+
+  .professorTitle p {
+    font-size: 1rem;
+  }
+
+  .scrollSection {
+    height: 100px;
+    top: 10px;
+  }
+
+  .scrollSection p {
+    font-size: 20px;
+    max-width: 80%;
+    position: relative;
+    left: 80px;
+  }
+
+  .logoContainer {
+    padding: 15px;
+  }
+
+  .logoScroll1,
+  .logoScroll2 {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .companyName {
+    width: 80px;
+    margin: 0 15px;
+  }
+
+  .DoughtsPart {
+    margin-top: 120px;
+  }
+
+  .header2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .header1 {
+    font-size: 28px;
+  }
+
+  .redLine {
+    display: none;
+  }
+
+  .SelfQuestioning {
+    margin-top: -20px;
+  }
+
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .questionItem p {
+    font-size: 18px;
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 441px) and (max-width: 768px) {
+  .headerContainer {
+    width: 100%;
+  }
+
+  .contentContainer {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+    flex-direction: column;
+    box-shadow: none;
+    border: 1px solid rgba(97, 97, 255, 0.2);
+    height: auto;
+  }
+
+  .FollowerImage {
+    width: 150px;
+  }
+
+  .symbolsContainer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .symbolItemContent {
+    position: relative;
+    top: 750px;
+    left: 10px;
+  }
+
+  .symbolItem {
+    gap: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .symbolText {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .EnrollButtonContent {
+    position: relative;
+    top: 550px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .EnrollButton {
+    visibility: visible;
+    display: block;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .FollowerStars {
+    gap: 5px;
+  }
+
+  .star {
+    width: 20px;
+  }
+
+  .FollowerCount {
+    font-size: 0.9rem;
+  }
+
+  .HeaderPicture {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top: -180px;
+    gap: 25px;
+  }
+
+  .headerText {
+    font-size: 48px;
+    margin-bottom: 15px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .professorTitle h3 {
+    font-size: 1.2rem;
+  }
+
+  .professorTitle p {
+    font-size: 1rem;
+  }
+
+  .scrollSection {
+    height: 100px;
+    top: 10px;
+  }
+
+  .scrollSection p {
+    font-size: 20px;
+    max-width: 80%;
+    position: relative;
+    left: 80px;
+  }
+
+  .logoContainer {
+    padding: 15px;
+  }
+
+  .logoScroll1,
+  .logoScroll2 {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .companyName {
+    width: 80px;
+    margin: 0 15px;
+  }
+
+  .DoughtsPart {
+    margin-top: 120px;
+  }
+
+  .header2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .header1 {
+    font-size: 28px;
+  }
+
+  .redLine {
+    display: none;
+  }
+
+  .SelfQuestioning {
+    margin-top: -20px;
+  }
+
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .questionItem p {
+    font-size: 18px;
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 920px) {
+  .headerContainer {
+    width: 100%;
+  }
+
+  .contentContainer {
+    width: 95%;
+    padding: 35px 30px;
+    margin: 25px auto;
+    flex-direction: column;
+    box-shadow: none;
+    border: 1px solid rgba(97, 97, 255, 0.311);
+    height: auto;
+  }
+
+  .FollowerImage {
+    width: 180px;
+  }
+
+  .symbolsContainer {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .symbolItemContent {
+    position: relative;
+    top: 750px;
+    left: 100px;
+  }
+
+  .symbolItem {
+    gap: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .symbolText {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .EnrollButtonContent {
+    position: relative;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .EnrollButton {
+    visibility: visible;
+    display: block;
+    font-size: 18px;
+    padding: 14px 25px;
+  }
+
+  .FollowerStars {
+    gap: 8px;
+  }
+
+  .star {
+    width: 24px;
+  }
+
+  .FollowerCount {
+    font-size: 1rem;
+  }
+
+  .HeaderPicture {
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top: -220px;
+    gap: 35px;
+  }
+
+  .headerText {
+    font-size: 64px;
+    margin-bottom: 20px;
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .professorTitle h3 {
+    font-size: 1.4rem;
+  }
+
+  .professorTitle p {
+    font-size: 1.1rem;
+  }
+
+  .scrollSection {
+    height: 130px;
+    top: 15px;
+  }
+
+  .scrollSection p {
+    font-size: 24px;
+    max-width: 60%;
+    position: relative;
+    left: 125px;
+  }
+
+  .logoContainer {
+    padding: 20px;
+  }
+
+  .logoScroll1,
+  .logoScroll2 {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .companyName {
+    width: 100px;
+    margin: 0 25px;
+  }
+
+  .DoughtsPart {
+    margin-top: 170px;
+  }
+
+  .header2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .header1 {
+    font-size: 36px;
+  }
+
+  .redLine {
+    display: none;
+  }
+
+  .SelfQuestioning {
+    margin-top: -40px;
+  }
+
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .questionItem p {
+    font-size: 20px;
+    max-width: 95%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1024px) {
+  .headerContainer {
+    width: 100%;
+  }
+
+  .contentContainer {
+    width: 90%;
+    padding: 25px 20px;
+    margin: 15px auto;
+    flex-direction: column;
+    box-shadow: none;
+    border: 1px solid rgba(97, 97, 255, 0.509);
+    height: auto;
+  }
+
+  .FollowerImage {
+    width: 120px;
+  }
+
+  .symbolsContainer {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .symbolItemContent {
+    position: relative;
+    top: 650px;
+    left: 30%;
+  }
+
+  .symbolItem {
+    gap: 10px;
+    padding-bottom: 13px;
+  }
+
+  .symbolText {
+    font-size: 14px;
+    max-width: 400px;
+  }
+
+  .EnrollButtonContent {
+    position: relative;
+    top: 470px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .EnrollButton {
+    visibility: hidden;
+    display: none;
+  }
+
+  .FollowerStars {
+    gap: 3px;
+  }
+
+  .star {
+    width: 16px;
+  }
+
+  .FollowerCount {
+    font-size: 1rem;
+  }
+  .FollowerImage {
+    width: 150px;
+    height: 50px;
+  }
+  .HeaderPicture {
+    width: 65%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top: -180px;
+    gap: 20px;
+  }
+
+  .headerText {
+    font-size: 62px;
+    margin: 10px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .professorTitle h3 {
+    margin-top: 20px;
+    font-size: 1.2 rem;
+    font-weight: 600;
+  }
+
+  .professorTitle p {
+    font-size: 1.2rem;
+  }
+
+  .scrollSection {
+    height: 100px;
+    top: 5px;
+  }
+
+  .scrollSection p {
+    font-size: 28px;
+    max-width: 500px;
+    position: relative;
+    left: 250px;
+  }
+
+  .logoScroll1,
+  .logoScroll2 {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .companyName {
+    width: 70px;
+    margin: 0 25px;
+  }
+
+  .DoughtsPart {
+    margin-top: 180px;
+  }
+
+  .header2 {
+    font-size: 42px;
+  }
+
+  .header1 {
+    font-size: 30px;
+  }
+
+  .redLine {
+    width: 50%;
+    height: 10vh;
+    position: relative;
+    left: 0;
+    top: -32px;
+  }
+
+  .SelfQuestioning {
+    margin-top: -60px;
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .questionItem p {
+    font-size: 16px;
+    max-width: 80%;
+    text-align: center;
+    color: black;
+  }
+}
+
+/* Medium Screens (Tablets, Max width: 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .contentContainer {
+    width: 98%;
+    height: 85vh;
+  }
+
+  .headerText {
+    font-size: 40px;
+  }
+
+  .FollowerImage {
+    width: 140px;
+  }
+
+  .DoughtsPart {
+    margin-top: 70px;
+  }
+
+  .header2 {
+    font-size: 42px;
+  }
+
+  .header1 {
+    font-size: 30px;
+  }
+
+  .SelfQuestioning {
+    gap: 20px;
+  }
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .questionItem p {
+    font-size: 18px;
+    max-width: 95%;
+    text-align: center;
+  }
+}
+
+/* Large Screens (Desktops, Min width: 1200px) */
+@media (min-width: 1200px) and (max-width: 1250px) {
+  .contentContainer {
+    width: 95%;
+    height: 85vh;
+    padding: 10px 60px;
+    margin: 20px auto;
+  }
+
+  .headerText {
+    font-size: 48px;
+  }
+
+  .FollowerImage {
+    width: 160px;
+  }
+
+  .DoughtsPart {
+    margin-top: 80px;
+  }
+
+  .header2 {
+    font-size: 56px;
+  }
+
+  .header1 {
+    font-size: 36px;
+  }
+
+  .questionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+  .questionItem p {
+    font-size: 20px;
+    max-width: 95%;
     text-align: center;
   }
 }

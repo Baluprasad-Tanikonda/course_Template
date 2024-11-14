@@ -128,3 +128,154 @@
     margin: 0 auto;
   }
 }
+
+@media (min-width: 377px) and (max-width: 575px) {
+  .testmonials {
+    margin-top: -80px;
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+  .subHeading {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .highlateWord {
+    font-size: 24px;
+  }
+
+  .line {
+    width: 60%;
+    height: 26px;
+    left: -60px;
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+
+  .statsContainer {
+    gap: 40px;
+    margin-top: 15px;
+  }
+
+  .statValue {
+    font-size: 42px;
+  }
+
+  .statLabel {
+    max-width: 60px;
+    font-size: 20px;
+  }
+}
+
+/* Medium Devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .testmonials {
+    margin-top: -60px;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding: 15px 20px;
+  }
+
+  .subHeading {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .highlateWord {
+    font-size: 26px;
+  }
+
+  .line {
+    display: none;
+    width: 70%;
+    height: 28px;
+    left: -40px;
+  }
+
+  .image {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 15px;
+  }
+
+  .statsContainer {
+    width: 100%;
+    max-width: 90%;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .statValue {
+    font-size: 44px;
+  }
+
+  .statLabel {
+    max-width: 70px;
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .testmonials {
+    margin-top: -60px;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding: 15px 20px;
+  }
+
+  .subHeading {
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .highlateWord {
+    font-size: 38px;
+  }
+
+  .line {
+    display: none;
+    width: 70%;
+    height: 28px;
+    left: -40px;
+  }
+
+  .image {
+    width: 100%;
+    /* max-width: 400px; */
+    margin-top: 15px;
+  }
+
+  .statsContainer {
+    width: 100%;
+    max-width: 100%;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .statValue {
+    font-size: 44px;
+  }
+
+  .statLabel {
+    max-width: 70px;
+    font-size: 22px;
+  }
+}

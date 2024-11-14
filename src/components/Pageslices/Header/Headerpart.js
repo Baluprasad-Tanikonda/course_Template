@@ -20,6 +20,7 @@ const Headerpart = () => {
     const header2Ref = useRef(null);
     const doughtsPartRef = useRef(null);
 
+
     // below the screen size
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
     useEffect(() => {

@@ -21,6 +21,7 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -150,7 +151,7 @@
   align-items: center;
 }
 
-.bioTitle{
+.bioTitle {
   font-size: 42px;
   color: black;
   font-weight: 600;
@@ -229,5 +230,33 @@
   }
   .statItem p:last-of-type {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 768px) {
+  .mentorInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mentorProfile {
+    width: 75%;
+    position: relative;
+    left: 80px;
+    align-content: center;
+  }
+  .mentorBio {
+    padding: 0 20px;
+    width: 100%;
+    font-size: 22px;
+  }   
+  .bioTitle{
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .mentorInfo {
+    display: none;
   }
 }

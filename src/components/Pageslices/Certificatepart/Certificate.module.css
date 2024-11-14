@@ -1,4 +1,9 @@
-/** @format */
+/**
+ * General Styles
+ *
+ * @format
+ */
+
 .timelineHeading {
   position: relative;
   font-size: 38px;
@@ -6,96 +11,89 @@
   color: black;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
   max-width: 550px;
-  left: 22%;
-  top: -5%;
   margin-bottom: 50px;
-  transform: translateX(-50%);
 }
 
 .timelineContainer {
   position: relative;
-  padding: 50px;
+  padding: 50px 20px;
   width: 100%;
-  height: 80vh;
+  min-height: 100vh;
   background-color: #f0f0f0;
-  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Line for the Timeline */
 .timelineLine {
   position: absolute;
-  left: 52%;
-  top: 29%;
+  left: 50%;
+  top: 100px;
   width: 4px;
-  height: 60%;
+  height: 85%;
   background: #e0e0e0;
   transform: translateX(-50%);
+  transition: height 0.3s ease-in-out;
 }
 
 .progressLine {
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 0;
   width: 4px;
   background: #4f46e5;
   border-radius: 2px;
-  transform: translateX(-50%);
+  z-index: 2;
   transition: height 0.3s ease-in-out;
 }
 
+/* Card Styles */
+.courseLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  z-index: 3;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .levelCard {
-  margin-top: 80px;
-  max-width: 500px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  max-width: 400px;
   padding: 20px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
   transition: transform 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 0.8s forwards;
 }
 
 .levelCard:hover {
   transform: scale(1.05);
 }
 
-.level1 {
-  position: absolute;
-  top: 10%;
-  left: 18%;
-  transform: translateX(0);
-  text-align: center;
+/* Odd and Even Card Positioning */
+.levelCard:nth-child(odd) {
+  flex-direction: row-reverse;
+  margin-right: auto;
+  transform: translateX(-60%);
 }
 
-.level2 {
-  position: absolute;
-  left: 57%;
+.levelCard:nth-child(even) {
+  flex-direction: row;
+  margin-left: auto;
+  transform: translateX(60%);
 }
 
-.level3 {
-  position: absolute;
-  top: 70%;
-  left: 18%;
-  transform: translateX(0);
-  text-align: center;
-}
-
-.level1 {
-  border-left: 5px solid #4f46e5;
-}
-
-.level2 {
-  border-left: 5px solid #4caf50;
-}
-
-.level3 {
-  border-left: 5px solid #ff9800;
-}
-
+/* Icon Styles */
 .levelIcon {
-  position: absolute;
-  left: 109%;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -105,23 +103,30 @@
   justify-content: center;
   color: #fff;
   font-size: 20px;
+  margin-right: 20px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.levelIcon2 {
-  position: absolute;
-  left: -20%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #4f46e5;
+
+.levelCard:nth-child(odd) .levelIcon {
+  margin-right: 0;
+  margin-left: 450px;
+}
+.levelCard:nth-child(even) .levelIcon {
+  margin-left: -28px;
+}
+
+/* Content Styles */
+.levelContent {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 20px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .levelTitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #333;
 }
@@ -130,83 +135,58 @@
   font-size: 0.9rem;
   color: #666;
   line-height: 1.5;
-  text-align: center;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 376px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
   .timelineHeading {
-    font-size: 18px;
-    max-width: 90%;
-    left: 45%;
-    top: 0;
-  }
-
-  .timelineContainer {
-    padding: 20px;
-    height: 100vh;
-  }
-
-  .timelineLine {
-    left: 50%;
-    top: 20%;
-    width: 2px;
-    height: 70%;
-  }
-
-  .progressLine {
-    left: 50%;
-    top: 20%;
-    width: 2px;
+    font-size: 24px;
   }
 
   .levelCard {
-    max-width: 220px;
-    padding: 15px;
-    margin-top: 50px;
-  }
-
-  .level1 {
-    top: 15%;
-    right: 10%;
-    transform: translateX(0);
-  }
-
-  .level2 {
-    left: 30%;
-    transform: translateX(-50%);
-    top: 45%;
-  }
-
-  .level3 {
-    top: 75%;
-    left: 10%;
-    transform: translateX(0);
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(0); /* Reset positioning for smaller screens */
+    margin: 0 auto;
   }
 
   .levelIcon {
-    left:-20%;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+    margin: 0 auto 10px;
   }
 
-  .levelIcon2 {
-    left: -20%;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+  .levelContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .levelCard:nth-child(odd) {
+    flex-direction: row-reverse;
+    margin-right: auto;
+    transform: translateX(-60%);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(60%);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: 340px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineHeading {
+    font-size: 18px;
+  }
+
+  .levelCard {
+    max-width: 250px;
   }
 
   .levelTitle {
@@ -215,5 +195,63 @@
 
   .levelDescription {
     font-size: 0.8rem;
+  }
+
+  .levelCard:nth-child(odd) {
+    flex-direction: row;
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(0);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: -28px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -28px;
+  }
+}
+
+@media (max-width: 376px) {
+  .timelineHeading {
+    font-size: 24px;
+  }
+  .timelineLine {
+    position: absolute;
+    left: -38px;
+  }
+  .levelCard {
+    max-width: 250px;
+  }
+
+  .levelTitle {
+    font-size: 1rem;
+  }
+
+  .levelDescription {
+    font-size: 0.8rem;
+  }
+  .levelCard:nth-child(odd) {
+    flex-direction: row;
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(0);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: -28px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -28px;
   }
 }

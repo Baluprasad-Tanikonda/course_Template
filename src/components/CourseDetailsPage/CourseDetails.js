@@ -7,8 +7,6 @@ import Testmonials from './../Pageslices/Testmonials/Testmonials';
 import Whatwillyoulearn from '../Pageslices/Whatwillyoulearn/Whatwillyoulearn';
 import Mentorpage from './../Pageslices/Mentorpage/Mentorpage';
 import Certificate from '../Pageslices/Certificatepart/Certificate';
-import Footer from './../Pageslices/Footer/Footer';
-import Pricebar from './../Pageslices/Pricebar/Pricebar';
 import Banner from '../Pageslices/Banner/Banner';
 
 
@@ -28,8 +26,6 @@ const CourseDetails = () => {
             <Mentorpage />
             <Certificate />
             <Accordian items={items} />
-            <Footer />
-            <Pricebar />
             <Banner/>
         </div>
     );

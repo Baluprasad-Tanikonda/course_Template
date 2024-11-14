@@ -116,7 +116,7 @@
 
   .ClassImage {
     width: 90%;
-    margin-top: 10px;
+    margin-top: 80px;
   }
 
   .nextLive {
@@ -139,3 +139,217 @@
   }
 }
 
+/* @media(max-width:768px){
+  .aside {
+    font-size: 1rem;
+    padding: 8px 10px;
+    right: 10px;
+    display: none;
+  }
+
+  .MasterClass {
+    width: 100%;
+    height: 300px;
+  }
+
+  .Text1,
+  .Text3 {
+    font-size: 18px;
+  }
+
+  .Text2 {
+    font-size: 40px;
+  }
+
+  .headings {
+    margin-top: 20px;
+  }
+
+  .classVideo {
+    top: -200px;
+  }
+
+  .ClassImage {
+    width: 90%;
+    margin-top: 80px;
+  }
+
+  .nextLive {
+    top: -150px;
+  }
+
+  .nextLive h2 {
+    padding-top: 15px;
+  }
+
+  .timerBox {
+    width: 70px;
+    padding:18px 2px;
+    margin: 0 8px;
+    font-size: 16px;
+  }
+
+  .timeCount {
+    font-size: 30px;
+  }
+} */
+
+@media (min-width: 377px) and (max-width: 575px) {
+  .aside {
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    display: block;
+  }
+
+  .MasterClass {
+    height: 350px;
+  }
+
+  .Text1,
+  .Text3 {
+    font-size: 20px;
+  }
+
+  .Text2 {
+    font-size: 44px;
+  }
+
+  .headings {
+    margin-top: 25px;
+  }
+
+  .classVideo {
+    top: -180px;
+  }
+
+  .ClassImage {
+    width: 85%;
+    margin-top: 60px;
+  }
+
+  .nextLive {
+    top: -130px;
+    padding-bottom: 50px;
+  }
+
+  .nextLive h2 {
+    padding-top: 18px;
+  }
+
+  .timerBox {
+    width: 80px;
+    padding: 20px 5px;
+    font-size: 18px;
+  }
+
+  .timeCount {
+    font-size: 32px;
+  }
+}
+
+/* Medium Devices (Tablet: 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .aside {
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    display: block;
+  }
+
+  .MasterClass {
+    height: 400px;
+  }
+
+  .Text1,
+  .Text3 {
+    font-size: 22px;
+  }
+
+  .Text2 {
+    font-size: 48px;
+  }
+
+  .headings {
+    margin-top: 30px;
+  }
+
+  .classVideo {
+    top: -160px;
+  }
+
+  .ClassImage {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  .nextLive {
+    top: -100px;
+    padding-bottom: 50px;
+  }
+
+  .nextLive h2 {
+    padding-top: 20px;
+  }
+
+  .timerBox {
+    width: 90px;
+    padding: 22px 8px;
+    font-size: 20px;
+  }
+
+  .timeCount {
+    font-size: 34px;
+  }
+}
+
+/* Large Devices (Desktop: 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .aside {
+    font-size: 1.3rem;
+    padding: 15px 20px;
+  }
+
+  .MasterClass {
+    height: 450px;
+  }
+
+  .Text1,
+  .Text3 {
+    font-size: 24px;
+  }
+
+  .Text2 {
+    font-size: 52px;
+  }
+
+  .headings {
+    margin-top: 35px;
+  }
+
+  .classVideo {
+    top: -120px;
+  }
+
+  .ClassImage {
+    width: 75%;
+    margin-top: 30px;
+  }
+
+  .nextLive {
+    top: -80px;
+    padding-bottom: 80px;
+  }
+
+  .nextLive h2 {
+    padding-top: 25px;
+  }
+
+  .timerBox {
+    width: 100px;
+    padding: 24px 10px;
+    font-size: 22px;
+  }
+
+  .timeCount {
+    font-size: 36px;
+  }
+}

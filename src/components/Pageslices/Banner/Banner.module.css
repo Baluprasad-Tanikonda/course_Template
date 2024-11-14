@@ -91,23 +91,32 @@
   background-color: #e05500;
 }
 
-@media (max-width: 768px) {
+
+
+/* media queries */
+@media (max-width: 376px) {
+  .bannerInfo {
+    display: none;
+  }
   .bannerContent {
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
-
-  .bannerImage {
-    margin-bottom: 10px;
+  .originalPrice {
+    font-size: 16px;
   }
-
-  .bannerPrice {
-    margin-top: 10px;
+  .discountedPrice {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 14px;
+    /* padding: 4px 6px; */
   }
 }
 
-@media (max-width: 376px) {
-  .bannerInfo {
+@media (max-width: 768px) {
+   .bannerInfo {
     display: none;
   }
   .bannerContent {

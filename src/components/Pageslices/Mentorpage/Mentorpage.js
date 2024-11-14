@@ -43,7 +43,8 @@ const Mentorpage = () => {
                 <div className={styles.cards}>
                     <div className="row justify-content-center">
                         {/* Bonus 1 */}
-                        <div className="col-md-4 mb-4">
+
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
                             <div className="text-center p-2 mb-0" style={{ backgroundColor: '#ff6f01', border: '2px dashed #ff7300', borderBottom: 'none', width: '90%', margin: '0 auto', borderRadius: '10px 10px 0 0' }}>
                                 <strong style={{ fontSize: '16px', color: 'white' }}>Bonus 1</strong>
                             </div>
@@ -51,15 +52,14 @@ const Mentorpage = () => {
                                 <img src={image1} className="card-img-top" alt="Bonus 1" />
                                 <div className="card-body text-center" style={{ backgroundColor: '#ffefe3' }}>
                                     <p className="card-text">
-                                        <span className="" style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹4999</span>
-                                        <span className="" style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
+                                        <span style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹4999</span>
+                                        <span style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Bonus 2 */}
-                        <div className="col-md-4 mb-4">
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
                             <div className="text-center p-2 mb-0" style={{ backgroundColor: '#ff6f01', border: '2px dashed #ff7300', borderBottom: 'none', width: '90%', margin: '0 auto', borderRadius: '10px 10px 0 0' }}>
                                 <strong style={{ fontSize: '16px', color: 'white' }}>Bonus 2</strong>
                             </div>
@@ -67,28 +67,28 @@ const Mentorpage = () => {
                                 <img src={image2} className="card-img-top" alt="Bonus 2" />
                                 <div className="card-body text-center" style={{ backgroundColor: '#ffefe3' }}>
                                     <p className="card-text">
-                                        <span className="" style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹5999</span>
-                                        <span className="" style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
+                                        <span style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹5999</span>
+                                        <span style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Bonus 3 */}
-                        <div className="col-md-4 mb-4">
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
                             <div className="text-center p-2 mb-0" style={{ backgroundColor: '#ff6f01', border: '2px dashed #ff7300', borderBottom: 'none', width: '90%', margin: '0 auto', borderRadius: '10px 10px 0 0' }}>
                                 <strong style={{ fontSize: '16px', color: 'white' }}>Bonus 3</strong>
                             </div>
                             <div className="card" style={{ border: '2px dashed #ff7300', borderTop: 'none', width: '90%', margin: '0 auto', borderRadius: '0 0 10px 10px' }}>
                                 <img src={image3} className="card-img-top" alt="Bonus 3" />
-                                <div className="card-body text-center" style={{ backgroundColor: '#ffefe3', paddingLeft: '25px' }}>
+                                <div className="card-body text-center" style={{ backgroundColor: '#ffefe3' }}>
                                     <p className="card-text">
-                                        <span className="" style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹6999</span>
-                                        <span className="" style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
+                                        <span style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>₹6999</span>
+                                        <span style={{ color: '#e46f15', paddingLeft: '25px', fontSize: '24px' }}>Free</span>
                                     </p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -129,16 +129,18 @@ const Mentorpage = () => {
                 </div>
 
                 <div className={styles.mentorBio}>
-                    <h3 className={styles.bioTitle}>Meet your Mentor</h3>
-                    <p className={styles.bioText}>
-                        Ganesh is a public speaker and YouTuber who co-founded Think School with Parsh Kothari, an education startup that generated 4+ Billion video impressions in 24 months.
-                    </p>
-                    <p className={styles.bioText}>
-                        Ganesh has helped 27,000+ students improve their communication to become effective public speakers, great salespeople, YouTubers, and successful business people. Ganesh’s dedication to education has earned him the title of “Insightful Education Creator of the Year 2023” at the Global Startup Summit 2023.
-                    </p>
-                    <p className={styles.bioText}>
-                        His vision is to make the Indian youth more employable by helping them learn practical and fundamental skills in life.
-                    </p>
+                   <div className={styles.bioContent}>
+                        <h3 className={styles.bioTitle}>Meet your Mentor</h3>
+                        <p className={styles.bioText}>
+                            Ganesh is a public speaker and YouTuber who co-founded Think School with Parsh Kothari, an education startup that generated 4+ Billion video impressions in 24 months.
+                        </p>
+                        <p className={styles.bioText}>
+                            Ganesh has helped 27,000+ students improve their communication to become effective public speakers, great salespeople, YouTubers, and successful business people. Ganesh’s dedication to education has earned him the title of “Insightful Education Creator of the Year 2023” at the Global Startup Summit 2023.
+                        </p>
+                        <p className={styles.bioText}>
+                            His vision is to make the Indian youth more employable by helping them learn practical and fundamental skills in life.
+                        </p>
+                   </div>
 
                     {/* Statistics */}
                     <div className={styles.mentorStats}>

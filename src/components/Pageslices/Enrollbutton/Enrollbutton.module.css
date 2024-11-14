@@ -50,3 +50,10 @@
     left: 100%;
   }
 }
+
+@media(min-width:1025px) and (max-width: 1200px) {
+  .shinebtn {
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+}

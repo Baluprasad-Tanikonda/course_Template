@@ -7,33 +7,46 @@ import { faFlag, faLightbulb, faPaperPlane } from "@fortawesome/free-regular-svg
 import { faCircleCheck, faCrown, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import EnrollButton from './../Enrollbutton/Enrollbutton';
 import certificate from '../../Assets/1-1.png';
+import { levelData } from "./levelData";
 
 const TimelineComponent = () => {
-    const [scrollProgress, setScrollProgress] = useState(0);
+    const [progressHeight, setProgressHeight] = useState(0);
     const timelineRef = useRef(null);
+    const cardRefs = useRef([]);
 
-    const handleScroll = () => {
-        if (!timelineRef.current) return;
-        const element = timelineRef.current;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementHeight = element.scrollHeight;
-        const windowHeight = window.innerHeight;
+    // Update progress line based on visible cards
+    const updateProgress = () => {
+        const totalCards = cardRefs.current.length;
+        const visibleCards = cardRefs.current.filter((card) => {
+            const rect = card.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        }).length;
 
-        // Calculate the scroll progress relative to the container
-        const progress = Math.min(
-            Math.max(((windowHeight - elementTop) / (elementHeight + windowHeight)) * 100, 0),
-            100
-        );
-        setScrollProgress(progress);
+        // Calculate progress based on visible cards
+        const progress = (visibleCards / totalCards) * 100;
+        setProgressHeight(progress);
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        // Initialize cardRefs array
+        cardRefs.current = cardRefs.current.slice(0, levelData.length);
+
+        // Set up scroll and resize event listeners
+        window.addEventListener("scroll", updateProgress);
+        window.addEventListener("resize", updateProgress);
+
+        // Initial update
+        updateProgress();
+
+        return () => {
+            window.removeEventListener("scroll", updateProgress);
+            window.removeEventListener("resize", updateProgress);
+        };
     }, []);
 
     return (
         <>
+            {/* Timeline Section */}
             <div
                 className={styles.timelineContainer}
                 ref={timelineRef}
@@ -48,69 +61,76 @@ const TimelineComponent = () => {
                     <p>Your Journey to becoming a <span style={{ color: "#ff5003" }}>Master Communicator</span></p>
                 </div>
 
-
                 <div className={styles.courseLevel}>
                     <div className={styles.timelineLine}>
                         <div
                             className={styles.progressLine}
-                            style={{ height: `${scrollProgress}%` }}
+                            style={{ height: `${progressHeight}%` }}
                         />
                     </div>
 
-                    <div className={`${styles.levelCard} ${styles.level1}`} style={{ top: "10%", left: "15%" }}>
-                        <div className={`${styles.levelIcon}`}>
-                            <FontAwesomeIcon icon={faFlag} className={styles.icon} />
+                    {/* Dynamic Level Cards */}
+                    {levelData.map((level, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.levelCard} ${styles[`level${index + 1}`]}`}
+                            style={level.position}
+                            ref={(el) => (cardRefs.current[index] = el)}
+                        >
+                            <div className={styles.levelIcon}>
+                                <FontAwesomeIcon icon={level.icon} className={level.iconClass} />
+                            </div>
+                            <div className={styles.levelContent}>
+                                <h3 className={styles.levelTitle}>{level.title}</h3>
+                                <p className={styles.levelDescription}>
+                                    {level.description}
+                                </p>
+                            </div>
                         </div>
-                        <h3 className={styles.levelTitle}>Stutter to Steady</h3>
-                        <p className={styles.levelDescription}>
-                            You will eliminate all the <em>‘ummm’</em> and <em>‘aaa’</em> and start
-                            speaking steadily and confidently to everyone around you!
-                        </p>
-                    </div>
-
-                    <div className={`${styles.levelCard} ${styles.level2}`} style={{ top: "40%" }}>
-                        <div className={`${styles.levelIcon2}`}>
-                            <FontAwesomeIcon icon={faPaperPlane} className={styles.icon2} />
-                        </div>
-                        <h3 className={styles.levelTitle}>Steady to Clear</h3>
-                        <p className={styles.levelDescription}>
-                            You will be able to present your thoughts in a clear manner to make people
-                            understand you easily.
-                        </p>
-                    </div>
-
-                    <div className={`${styles.levelCard} ${styles.level3}`} style={{ top: "70%", left: "15%" }}>
-                        <div className={`${styles.levelIcon}`}>
-                            <FontAwesomeIcon icon={faLightbulb} className={styles.icon} />
-                        </div>
-                        <h3 className={styles.levelTitle}>Clear to Clever</h3>
-                        <p className={styles.levelDescription}>
-                            People will remember you, trust you, respect you, and will extend a hand of
-                            friendship towards you upfront!
-                        </p>
-                    </div>
-
+                    ))}
                 </div>
             </div>
 
+            {/* Certificate Section */}
             <div className={certificateStyling.content}>
                 <div className={certificateStyling.certificateContainer}>
                     <div className={certificateStyling.textContainer}>
-                        <h3 className={certificateStyling.heading}>Get<span>&nbsp; Certified</span></h3>
+                        <h3 className={certificateStyling.heading}>
+                            Get<span>&nbsp; Certified</span>
+                        </h3>
                         <div className={certificateStyling.descriptionContainer}>
-                            <p className={certificateStyling.description}><span className={certificateStyling.symbol}><FontAwesomeIcon icon={faCrown} /></span>Earn your credentials of Expertise</p>
-                            <p className={certificateStyling.description}><span className={certificateStyling.symbol}><FontAwesomeIcon icon={faShareNodes} /></span>Share your verified certificate</p>
-                            <p className={certificateStyling.description}><span className={certificateStyling.symbol}><FontAwesomeIcon icon={faCircleCheck} /></span>Add certificate on LinkedIn</p>
-                            <div className={certificateStyling.btn}><EnrollButton label="Upskill Today" /></div>
+                            <p className={certificateStyling.description}>
+                                <span className={certificateStyling.symbol}>
+                                    <FontAwesomeIcon icon={faCrown} />
+                                </span>
+                                Earn your credentials of Expertise
+                            </p>
+                            <p className={certificateStyling.description}>
+                                <span className={certificateStyling.symbol}>
+                                    <FontAwesomeIcon icon={faShareNodes} />
+                                </span>
+                                Share your verified certificate
+                            </p>
+                            <p className={certificateStyling.description}>
+                                <span className={certificateStyling.symbol}>
+                                    <FontAwesomeIcon icon={faCircleCheck} />
+                                </span>
+                                Add certificate on LinkedIn
+                            </p>
+                            <div className={certificateStyling.btn}>
+                                <EnrollButton label="Upskill Today" />
+                            </div>
                         </div>
                     </div>
                     <div className={certificateStyling.imageContainer}>
-                        <img src={certificate} alt="Certificate Preview" className={certificateStyling.certificateImage} />
+                        <img
+                            src={certificate}
+                            alt="Certificate Preview"
+                            className={certificateStyling.certificateImage}
+                        />
                     </div>
                 </div>
             </div>
-
-
         </>
     );
 };
